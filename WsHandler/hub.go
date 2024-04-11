@@ -21,7 +21,7 @@ func (h *Hub) BroadcastMessage(msg []byte) {
 		err := conn.WriteMessage(websocket.TextMessage, msg)
 		if err != nil {
 			Helpers.Log(err, "Error Broadcasting message")
-			return
+
 		}
 	}
 }
